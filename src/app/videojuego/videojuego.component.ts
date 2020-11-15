@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
     selector: 'videojuego',
     templateUrl: './videojuego.component.html'
 })
-export class videojuegoComponent{
+export class VideojuegoComponent{
     public titulo: string;
     public listado: string;
 
