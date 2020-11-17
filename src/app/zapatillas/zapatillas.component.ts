@@ -27,8 +27,10 @@ export class ZapatillasComponent implements OnInit{
 
     getMarcas(){
         this.zapatillas.forEach((zapatilla,index) => {
-            this.marcas.push(zapatilla.marca);
-            console.log(index);
+            
+            if(this.marcas.indexOf(zapatilla.marca) < 0 ){
+                this.marcas.push(zapatilla.marca);
+            }
         });
 
         console.log(this.marcas);
