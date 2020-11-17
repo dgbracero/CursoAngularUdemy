@@ -27,7 +27,9 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     routing
   ],
-  providers: [],
+  providers: [
+    appRoutingProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
