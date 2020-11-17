@@ -20,7 +20,12 @@
 <ul>
     <li *ngFor="let deportiva  of zapatillas">
         {{ deportiva.nombre }} -
-        <strong  [class.altoPrecio] = "deportiva.precio >= 80" >
+        <strong  [class.altoPrecio] = "deportiva.precio >= 80" 
+            [ngClass]="{
+                'fondoRojo': deportiva.precio > 100,
+                'subrayado': deportiva.marca == 'Nike'
+            }"
+            >
             {{deportiva.precio}}$
         </strong>
         <span *ngIf="deportiva.precio < 80"
